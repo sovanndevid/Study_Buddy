@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Top End Gym Center - Services</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <div class="brand">
+        <img src="images/logo.png" alt="TOP END Logo" class="logo" />
+        <span class="brand-name">TOP END<br><small>GYM CENTER</small></span>
+      </div>
+      <nav>
+        <div class="hamburger" onclick="toggleMenu(this)">
+          <span></span><span></span><span></span>
+        </div>
+        <div class="nav-links">
+          <a href="#">Home</a>
+          <a href="#services">Services</a>
+          <a href="#">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ✅ HERO SECTION -->
+  <section class="hero centered-layout">
+    <h1>Welcome to TOP END Gym Center</h1>
+    <p>
+      We help you reach your fitness goals with expert coaching, flexible training programs,
+      and practical nutrition guidance. Explore our services below.
+    </p>
+    <button onclick="document.getElementById('services').scrollIntoView({ behavior: 'smooth' })">
+      Learn More
+    </button>
+  </section>
+
+  <!-- ✅ CARDS -->
+  <section class="cards" id="services">
+    <div class="card" onclick="openModal('trainerModal')">
+      <img src="images/trainer-icon.png" alt="Trainer Icon" />
+      <h3>Find a Personal Trainer</h3>
+      <p>Get matched with a certified coach tailored to your goals</p>
+      <span class="arrow">➜</span>
+    </div>
+    <div class="card" onclick="openModal('timetableModal')">
+      <img src="images/calendar-icon.png" alt="Calendar Icon" />
+      <h3>Group Fitness Timetable</h3>
+      <p>Check out upcoming classes</p>
+      <span class="arrow">➜</span>
+    </div>
+    <div class="card" onclick="openModal('nutritionModal')">
+      <img src="images/meal-icon.png" alt="Meal Icon" />
+      <h3>Nutrition & Meal Tips</h3>
+      <p>Get advice for healthy eating</p>
+      <span class="arrow">➜</span>
+    </div>
+    <div class="card" onclick="openModal('membershipModal')">
+      <img src="images/lock-icon.png" alt="Lock Icon" />
+      <h3>Join Membership</h3>
+      <p>Start your fitness journey</p>
+      <span class="arrow">➜</span>
+    </div>
+  </section>
+
+  <!-- ✅ MODALS -->
+  <div id="trainerModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('trainerModal')">&times;</span>
+      <h3>Find a Personal Trainer</h3>
+      <p>Tell us your fitness goals and we'll match you with a certified personal coach.</p>
+      <label>Name</label>
+      <input type="text" placeholder="Your name" />
+      <label>Goal</label>
+      <input type="text" placeholder="e.g. Weight loss, Strength..." />
+      <button>Submit</button>
+    </div>
+  </div>
+
+  <div id="timetableModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('timetableModal')">&times;</span>
+      <h3>Group Fitness Timetable</h3>
+      <p>Check our class schedule to plan your week:</p>
+      <ul>
+        <li>Monday - HIIT @ 6PM</li>
+        <li>Wednesday - Yoga @ 7AM</li>
+        <li>Friday - Spin Class @ 5PM</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="nutritionModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('nutritionModal')">&times;</span>
+      <h3>Nutrition & Meal Tips</h3>
+      <p>Get easy and healthy tips tailored for gym enthusiasts.</p>
+      <ul>
+        <li>🍳 Tip: Start your day with high-protein breakfast.</li>
+        <li>🥗 Snack: Try Greek yogurt + berries post-workout.</li>
+        <li>💧 Stay hydrated throughout the day.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="membershipModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('membershipModal')">&times;</span>
+      <h3>Join Membership</h3>
+      <form>
+        <label for="name">Name</label>
+        <input type="text" id="name" required />
+        <label for="email">Email</label>
+        <input type="email" id="email" required />
+        <label for="plan">Preferred Plan</label>
+        <input type="text" id="plan" required />
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ✅ FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <p>&copy; 2025 TOP END Gym Center. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
