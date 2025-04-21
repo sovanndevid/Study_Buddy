@@ -1,28 +1,26 @@
-// Function to open the modal
-function openModal(id) {
-  const modal = document.getElementById(id);
-  modal.style.display = 'flex';
-}
+// Smooth scroll to #services section
+document.addEventListener('DOMContentLoaded', () => {
+  const exploreBtn = document.getElementById('exploreBtn');
+  const servicesSection = document.getElementById('services');
 
-// Function to close the modal
-function closeModal(id) {
-  const modal = document.getElementById(id);
-  modal.style.display = 'none';
-}
+  if (exploreBtn && servicesSection) {
+    exploreBtn.addEventListener('click', () => {
+      servicesSection.scrollIntoView({ behavior: 'smooth' });
+    });
+  }
 
-// Function to toggle the mobile menu
+  // Update current year in footer
+  const currentYear = document.getElementById('currentYear');
+  if (currentYear) {
+    currentYear.textContent = new Date().getFullYear();
+  }
+});
+
+// Toggle mobile menu when hamburger icon is clicked
 function toggleMenu(hamburger) {
   hamburger.classList.toggle('open');
   const navLinks = document.querySelector('.nav-links');
-  navLinks.classList.toggle('active');
-}
-
-// Close modal when clicking outside of the modal content
-window.onclick = function (event) {
-  const modals = document.querySelectorAll('.modal');
-  modals.forEach((modal) => {
-    if (event.target === modal) {
-      closeModal(modal.id);
-    }
-  });
+  if (navLinks) {
+    navLinks.classList.toggle('active');
+  }
 }

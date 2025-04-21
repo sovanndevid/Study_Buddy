@@ -3,24 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Top End Gym Center - Services</title>
+  <title>Study Buddy - Welcome</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
   <header>
     <div class="nav-container">
       <div class="brand">
-        <img src="images/logo.png" alt="TOP END Logo" class="logo" />
-        <span class="brand-name">TOP END<br><small>GYM CENTER</small></span>
+        <span class="brand-name">
+          <strong>STUDY</strong><br>
+          <strong>Buddy</strong><br>
+        </span>
+        <p class="tagline">your smart, simple student planner</p>
       </div>
       <nav>
         <div class="hamburger" onclick="toggleMenu(this)">
           <span></span><span></span><span></span>
         </div>
         <div class="nav-links">
-          <a href="#">Home</a>
-          <a href="#services">Services</a>
-          <a href="#">Contact</a>
+          <a href="#home">Home</a>
+          <a href="#">Features</a>
+          <a href="#">My Tasks</a>
+          <a href="#">About Us</a>
         </div>
       </nav>
     </div>
@@ -28,30 +32,27 @@
 
   <!-- HERO SECTION -->
   <section class="hero centered-layout">
-    <h1>Welcome to TOP END Gym Center</h1>
+    <h1>Welcome to <span class="highlight">Study Buddy</span></h1>
     <p>
-      We help you reach your fitness goals with expert coaching, flexible training programs,
-      and practical nutrition guidance. Explore our services below.
+      Stay focused and in control with personalised planning tools, shared study sessions, and daily motivation.
     </p>
-    <button onclick="document.getElementById('services').scrollIntoView({ behavior: 'smooth' })">
-      Learn More
-    </button>
+    <button id="exploreBtn">Explore Features</button>
   </section>
 
   <!-- CARDS -->
   <!-- Add your cards here -->
-  
+
   <!-- MODALS -->
-  <!-- Add your model here -->
- 
+  <!-- Add your modal here -->
 
   <!-- FOOTER -->
   <footer>
     <div class="footer-container">
-      <p>&copy; 2025 TOP END Gym Center. All rights reserved.</p>
+      <p>&copy; <span id="currentYear">2025</span> Study Buddy. All rights reserved.</p>
     </div>
   </footer>
-
+  
   <script src="js/script.js"></script>
+  
 </body>
 </html>
