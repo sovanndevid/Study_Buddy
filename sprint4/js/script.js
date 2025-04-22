@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Explore Features smooth scroll (ensure there's an ID "services")
   const exploreBtn = document.getElementById('exploreBtn');
-  const services = document.getElementById('services');
+  const services = document.getElementById('Features');
   if (exploreBtn && services) {
     exploreBtn.addEventListener('click', () => {
       services.scrollIntoView({ behavior: 'smooth' });
