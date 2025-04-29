@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study Buddy - To-Do List</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .todo-container {
+      max-width: 600px;
+      margin: 50px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .todo-container h2 {
+      text-align: center;
+      color: #003366;
+      margin-bottom: 20px;
+    }
+    #taskInput {
+      width: 75%;
+      padding: 10px;
+      margin-right: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    #addTaskButton {
+      padding: 10px 15px;
+      background-color: #2563eb;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      background: #f1f7fd;
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 6px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    li.completed {
+      text-decoration: line-through;
+      color: grey;
+    }
+    button.delete {
+      background: red;
+      color: white;
+      border: none;
+      padding: 6px 10px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+    <header class="todo-header">
+      <div class="header-content">
+        <h1>Stay on Track</h1>
+        <p>Manage your daily tasks and study goals with ease.</p>
+      </div>
+    </header>
+  
+    <div class="todo-section">
+      <div class="todo-container">
+        <h2>Daily To-Do List</h2>
+        <input type="text" id="taskInput" placeholder="Enter your task">
+        <button id="addTaskButton">Add Task</button>
+        <ul id="taskList"></ul>
+      </div>
+    </div>
+  
+    <script src="js/script.js"></script>
+    <header>
+        <footer class="site-footer">
+            <div class="footer-container">
+              <div class="brand">
+                <div class="brand-name">STUDY BUDDY</div>
+                <div class="tagline">Your study planner</div>
+              </div>
+              <nav class="nav-links">
+                <a href="home.html">Home</a>
+                <a href="timetable.html">Timetable</a>
+                <a href="countdown.html">Countdown</a>
+                <a href="pomodoro.html">Pomodoro</a>
+              </nav>
+            </div>
+          </footer>
+          
+  
+  </body>
+</html>
