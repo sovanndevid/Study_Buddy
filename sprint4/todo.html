@@ -1,43 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Study Buddy - To-Do List</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css"/>
   <style>
     .todo-container {
       max-width: 600px;
       margin: 50px auto;
       background: white;
-      padding: 20px;
+      padding: 20px 30px;
       border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
+
     .todo-container h2 {
       text-align: center;
       color: #003366;
       margin-bottom: 20px;
     }
+
     #taskInput {
-      width: 75%;
+      width: 65%;
       padding: 10px;
       margin-right: 10px;
       border: 1px solid #ccc;
       border-radius: 6px;
     }
-    #addTaskButton {
+
+    #addTaskButton, #saveTaskButton {
       padding: 10px 15px;
       background-color: #2563eb;
       color: white;
       border: none;
       border-radius: 6px;
       cursor: pointer;
+      margin-top: 10px;
     }
+
     ul {
       list-style: none;
       padding: 0;
     }
+
     li {
       background: #f1f7fd;
       margin: 10px 0;
@@ -46,11 +52,24 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      border-left: 5px solid #2563eb;
     }
+
     li.completed {
       text-decoration: line-through;
       color: grey;
     }
+
+    button.edit {
+      background: #ffc107;
+      color: white;
+      border: none;
+      padding: 6px 10px;
+      margin-right: 5px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
     button.delete {
       background: red;
       color: white;
@@ -59,54 +78,79 @@
       border-radius: 6px;
       cursor: pointer;
     }
+
+    #darkModeToggle {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      z-index: 999;
+      padding: 10px 16px;
+      font-size: 14px;
+      background-color: #2563eb;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    #darkModeToggle:hover {
+      background-color: #1e4ed9;
+    }
   </style>
 </head>
-<button id="darkModeToggle">🌙 Dark Mode</button>
-<script>
-  const toggleButton = document.getElementById("darkModeToggle");
-  toggleButton.addEventListener("click", () => {
-    document.body.classList.toggle("dark-mode");
-    toggleButton.textContent = document.body.classList.contains("dark-mode")
-      ? "☀️ Light Mode"
-      : "🌙 Dark Mode";
-  });
-</script>
+
 <body>
-    <header class="todo-header">
-      <div class="header-content">
-        <h1>Stay on Track</h1>
-        <p>Manage your daily tasks and study goals with ease.</p>
-      </div>
-    </header>
-  
-    <div class="todo-section">
-      <div class="todo-container">
-        <h2>Daily To-Do List</h2>
-        <input type="text" id="taskInput" placeholder="Enter your task" spellcheck="true" autocomplete="off">
-        <button id="addTaskButton">Add Task</button>
-        <button id="saveTaskButton">Save</button>
-        <ul id="taskList"></ul>
-      </div>
+  <!-- Dark Mode Toggle -->
+  <button id="darkModeToggle">🌙 Dark Mode</button>
+
+  <!-- Header -->
+  <header class="todo-header">
+    <div class="header-content">
+      <h1>Stay on Track</h1>
+      <p>Manage your daily tasks and study goals with ease.</p>
     </div>
-  
-    <script src="js/script.js"></script>
-    <header>
-        <footer class="site-footer">
-            <div class="footer-container">
-              <div class="brand">
-                <div class="brand-name">STUDY BUDDY</div>
-                <div class="tagline">Your study planner</div>
-              </div>
-              <nav class="nav-links">
-                <a href="index.html">Home Page</a>
-                <a href="timetable.html">Weekly Timetable</a>
-                <a href="countdown.html">Countdown Timer</a>
-                <a href="quotes.html">Motivational Quotes</a>
-                <a href="pomodoro.html">Pomodoro Timer</a>
-              </nav>
-            </div>
-          </footer>
-          
-  
-  </body>
+  </header>
+
+  <!-- To-Do List -->
+  <section class="todo-section">
+    <div class="todo-container">
+      <h2>Daily To-Do List</h2>
+      <input type="text" id="taskInput" placeholder="Enter your task" spellcheck="true" autocomplete="off">
+      <button id="addTaskButton">Add Task</button>
+      <button id="saveTaskButton">Save</button>
+      <ul id="taskList"></ul>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="brand">
+        <div class="brand-name">STUDY BUDDY</div>
+        <div class="tagline">Your study planner</div>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html">Home Page</a>
+        <a href="timetable.html">Weekly Timetable</a>
+        <a href="countdown.html">Countdown Timer</a>
+        <a href="quotes.html">Motivational Quotes</a>
+        <a href="pomodoro.html">Pomodoro Timer</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/script.js"></script>
+  <script>
+    const toggleButton = document.getElementById("darkModeToggle");
+    toggleButton.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+      toggleButton.textContent = document.body.classList.contains("dark-mode")
+        ? "☀️ Light Mode"
+        : "🌙 Dark Mode";
+    });
+  </script>
+</body>
 </html>
