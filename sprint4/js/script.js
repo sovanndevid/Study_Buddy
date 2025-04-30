@@ -111,16 +111,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Basic autocomplete (example with sample words)
-  const suggestions = ["study", "assignment", "homework", "project", "submit"].sort();
-  taskInput.addEventListener("input", function () {
-    const match = suggestions.find(word => word.startsWith(this.value.toLowerCase()));
-    if (match && this.value !== match) {
-      this.value = match;
-      this.setSelectionRange(this.value.length, this.value.length);
-    }
-  });
-
   updateTaskList();
   displaySavedTasks();
 
