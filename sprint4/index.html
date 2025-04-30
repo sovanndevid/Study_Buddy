@@ -1,177 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Study Buddy - Welcome</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study Buddy - Home</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .card-front h3,
+    .card-front p {
+      color: #000;
+    }
+    .card-front img {
+      max-width: 100%;
+      height: auto;
+      margin-top: 10px;
+      border-radius: 8px;
+    }
+  </style>
 </head>
 <body>
+
+  <!-- HEADER -->
   <header>
     <div class="nav-container">
       <div class="brand">
-        <span class="brand-name">
-          <strong>STUDY</strong><br>
-          <strong>Buddy</strong><br>
-        </span>
-        <p class="tagline">your smart, simple student planner</p>
+        <div class="brand-name">Study Buddy <small>2025</small></div>
+        <div class="tagline">Plan. Track. Succeed.</div>
       </div>
-      <nav>
-        <div class="hamburger" onclick="toggleMenu(this)">
-          <span></span><span></span><span></span>
-        </div>
-        <div class="nav-links">
-          <a href="#home">Home</a>
-          <a href="#">Features</a>
-          <a href="#">My Tasks</a>
-          <a href="#">About Us</a>
-        </div>
+      <nav class="nav-links">
+        <a href="#features">Explore Features</a>
+        <a href="#about">About Us</a>
       </nav>
     </div>
   </header>
 
   <!-- HERO SECTION -->
   <section class="hero centered-layout">
-    <h1>Welcome to <span class="highlight">Study Buddy</span></h1>
-    <p>
-      Stay focused and in control with personalised planning tools, shared study sessions, and daily motivation.
-    </p>
-    <button id="exploreBtn">Explore Features</button>
+    <h1>Welcome to Study Buddy</h1>
+    <p>Your personal companion to track tasks, manage time, and stay focused!</p>
+    <a href="#features" class="nav-btn">Explore Features</a>
   </section>
 
-  <button id="darkModeToggle" aria-label="Toggle Dark Mode">🌙 Dark Mode</button>
-
-  <!-- CARDS -->
-  <section id = "Features">
-    <div class="card-container">
-        <!-- Coming Soon Product Cards -->
-        <div class="card coming-soon">
-            <div class="card-inner">
-                <div class="card-front card-content">
-                    <img src="images/IMG_1679.jpg" alt="Serene Chic">
-                    <h3>Serene Chic 1</h3>
-                    <p>Stay tuned for the latest release of Serene Chic Collection 1!</p>
-                    <p class="coming-soon-price"><b>Price: To Be Announced</b></p>
-                    <button class="btn coming-soon-btn">Notify Me</button>
-                </div>
-                <div class="card-back">
-                    <div class="back-content">
-                        <p class="back-title"><b>Get 10% OFF</b> on early signup and get access to exclusive members only offers and promotions, new arrivals and back in stock updates!</p>
-                        <input type="email" placeholder="Enter your email" class="email-input">
-                        <button class="btn submit-btn">Submit</button>
-                    </div>
-                </div>
-            </div>
+  <!-- FEATURES SECTION -->
+  <section id="features" class="card-container">
+    <div class="card">
+      <a href="todo.html">
+        <div class="card-inner">
+          <div class="card-front">
+            <h3>To-Do List</h3>
+            <p>Organise your daily tasks easily.</p>
+            <img src="images/to-do-list.jpg" alt="To-Do List Image">
+          </div>
         </div>
-    
-        <div class="card coming-soon">
-            <div class="card-inner">
-                <div class="card-front card-content">
-                    <img src="images/IMG_1886.jpg" alt="Serene Chic">
-                    <h3>Serene Chic 2</h3>
-                    <p>Stay tuned for the latest release of Serene Chic Collection 2!</p>
-                    <p class="coming-soon-price"><b>Price: To Be Announced</b></p>
-                    <button class="btn coming-soon-btn">Notify Me</button>
-                </div>
-                <div class="card-back">
-                    <div class="back-content">
-                        <p class="back-title"><b>Get 10% OFF</b> on early signup and get access to exclusive members only offers and promotions, new arrivals and back in stock updates!</p>
-                        <input type="email" placeholder="Enter your email" class="email-input">
-                        <button class="btn submit-btn">Submit</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    
-        <div class="card coming-soon">
-            <div class="card-inner">
-                <div class="card-front card-content">
-                    <img src="images/IMG_1946.JPG" alt="Aspire Attire">
-                    <h3>Aspire Attire 1</h3>
-                    <p>Stay tuned for the latest release of Aspire Attire Collection 1!</p>
-                    <p class="coming-soon-price"><b>Price: To Be Announced</b></p>
-                    <button class="btn coming-soon-btn">Notify Me</button>
-                </div>
-                <div class="card-back">
-                    <div class="back-content">
-                        <p class="back-title"><b>Get 10% OFF</b> on early signup and get access to exclusive members only offers and promotions, new arrivals and back in stock updates!</p>
-                        <input type="email" placeholder="Enter your email" class="email-input">
-                        <button class="btn submit-btn">Submit</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    
-        <div class="card coming-soon">
-            <div class="card-inner">
-                <div class="card-front card-content">
-                    <img src="images/IMG_2217.jpg" alt="Aspire Attire">
-                    <h3>Aspire Attire 2</h3>
-                    <p>Stay tuned for the latest release of Aspire Attire Collection 2!</p>
-                    <p class="coming-soon-price"><b>Price: To Be Announced</b></p>
-                    <button class="btn coming-soon-btn">Notify Me</button>
-                </div>
-                <div class="card-back">
-                    <div class="back-content">
-                        <p class="back-title"><b>Get 10% OFF</b> on early signup and get access to exclusive members only offers and promotions, new arrivals and back in stock updates!</p>
-                        <input type="email" placeholder="Enter your email" class="email-input">
-                        <button class="btn submit-btn">Submit</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    
-        <div class="card coming-soon">
-            <div class="card-inner">
-                <div class="card-front card-content">
-                    <img src="images/accessories1.jpg" alt="Opal Styles">
-                    <h3>Opal Styles 1</h3>
-                    <p>Stay tuned for the latest release of Opal Styles Collection 1!</p>
-                    <p class="coming-soon-price"><b>Price: To Be Announced</b></p>
-                    <button class="btn coming-soon-btn">Notify Me</button>
-                </div>
-                <div class="card-back">
-                    <div class="back-content">
-                        <p class="back-title"><b>Get 10% OFF</b> on early signup and get access to exclusive members only offers and promotions, new arrivals and back in stock updates!</p>
-                        <input type="email" placeholder="Enter your email" class="email-input">
-                        <button class="btn submit-btn">Submit</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    
-        <div class="card coming-soon">
-            <div class="card-inner">
-                <div class="card-front card-content">
-                    <img src="images/accessories2.JPG" alt="Opal Styles">
-                    <h3>Opal Style 2</h3>
-                    <p>Stay tuned for the latest release of Opal Styles Collection 2!</p>
-                    <p class="coming-soon-price"><b>Price: To Be Announced</b></p>
-                    <button class="btn coming-soon-btn">Notify Me</button>
-                </div>
-                <div class="card-back">
-                    <div class="back-content">
-                        <p class="back-title"><b>Get 10% OFF</b> on early signup and get access to exclusive members only offers and promotions, new arrivals and back in stock updates!</p>
-                        <input type="email" placeholder="Enter your email" class="email-input">
-                        <button class="btn submit-btn">Submit</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+      </a>
     </div>
-
+    <div class="card">
+      <a href="quotes.html">
+        <div class="card-inner">
+          <div class="card-front">
+            <h3>Motivational Quotes</h3>
+            <p>Get inspired every day!</p>
+            <img src="images/motivational-quote.avif" alt="Motivational Quotes Image">
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="card">
+      <a href="countdown.html">
+        <div class="card-inner">
+          <div class="card-front">
+            <h3>Countdown Timer</h3>
+            <p>Countdown to your deadlines.</p>
+            <img src="images/countdown-timer.jpeg" alt="Countdown Timer Image">
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="card">
+      <a href="timer.html">
+        <div class="card-inner">
+          <div class="card-front">
+            <h3>Pomodoro Timer</h3>
+            <p>Work smarter, not harder.</p>
+            <img src="images/pomodoro-timer.png" alt="Pomodoro Timer Image">
+          </div>
+        </div>
+      </a>
+    </div>
   </section>
-  
 
+  <!-- DARK MODE TOGGLE -->
+  <button id="darkModeToggle">Dark Mode</button>
 
   <!-- FOOTER -->
-  <footer>
+  <footer class="site-footer">
     <div class="footer-container">
-      <p>&copy; <span id="currentYear">2025</span> Study Buddy. All rights reserved.</p>
+      <div class="brand-name">2025 Study Buddy. All rights reserved.</div>
+      <div class="footer-links">
+        <a href="#about">About Us</a>
+      </div>
     </div>
   </footer>
-  
-  <script src="js/script.js"></script>
-  
+
+  <!-- ABOUT US SECTION -->
+  <section id="about" class="hero centered-layout">
+    <h2>About Us</h2>
+    <p>Study Buddy is your go-to tool for productivity. We believe in making study life easier, more organised, and more successful. Built by students, for students.</p>
+  </section>
+
+<script>
+// Dark Mode Toggle
+const darkModeToggle = document.getElementById('darkModeToggle');
+darkModeToggle.addEventListener('click', () => {
+  document.body.classList.toggle('dark-mode');
+});
+</script>
+
 </body>
 </html>
