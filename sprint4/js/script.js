@@ -32,8 +32,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // To-Do list
   const taskInput = document.getElementById('taskInput');
   const addTaskButton = document.getElementById('addTaskButton');
+  const saveButton = document.getElementById('saveTaskButton');
   const taskList = document.getElementById('taskList');
-  const savedList = document.getElementById('savedTasks'); // Optional new list to display saved tasks
+  const savedList = document.getElementById('savedTasks');
   let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
   let changesMade = false;
 
@@ -77,6 +78,14 @@ document.addEventListener("DOMContentLoaded", () => {
     changesMade = false;
   }
 
+  if (saveButton) {
+    saveButton.addEventListener("click", () => {
+      saveTasks();
+      displaySavedTasks();
+      alert("Tasks saved!");
+    });
+  }
+
   taskInput.addEventListener("input", () => {
     changesMade = true;
   });
@@ -103,7 +112,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  // Optional: display saved tasks separately if needed
   function displaySavedTasks() {
     if (savedList) {
       const saved = JSON.parse(localStorage.getItem("tasks")) || [];
