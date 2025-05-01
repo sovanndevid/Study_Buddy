@@ -834,3 +834,11 @@ body {
 .dark-mode button.delete {
   background-color: #c0392b;
 }
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  background: #cce4f7;
+  padding: 20px;
+  z-index: 999;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
