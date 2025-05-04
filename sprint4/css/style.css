@@ -348,6 +348,17 @@ nav a:hover::after {
 }
 
 
+.card-front h3,
+.card-front p {
+  color: #000;
+}
+.card-front img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+  border-radius: 8px;
+}
+
 /* .cards {
   display: flex;
   justify-content: center;
