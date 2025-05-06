@@ -13,44 +13,6 @@
     min-height: 100vh;
   }
   
-  header {
-    background-color: #3366ff;
-    padding: 15px 30px;
-    color: white;
-  }
-  
-  header {
-    background-color: #d6eaff; 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    flex-wrap: wrap;
-  }
-  
-  header .logo {
-    font-weight: bold;
-    font-size: 1.5rem;
-    line-height: 1;
-  }
-  
-  header .logo span {
-    display: block;
-    color: #002f6c;
-  }
-  
-  header nav a {
-    margin-left: 1rem;
-    color: #002f6c;
-    font-weight: 600;
-    text-decoration: none;
-  }
-  
-  header nav {
-    display: flex;
-    gap: 1rem;
-  }
-  
   .nav-container {
     display: flex;
     justify-content: space-between;
@@ -158,14 +120,6 @@
   
   button.reset {
     background-color: #ea5455;
-  }
-  
-  footer {
-    background-color: #cbe2f7;
-    padding: 20px;
-    text-align: center;
-    font-size: 14px;
-    margin-top: 40px;
   }
   
   @media (max-width: 600px) {
