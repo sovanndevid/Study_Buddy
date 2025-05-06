@@ -2,27 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Motivational Flower | Study Buddy</title>
   <link rel="stylesheet" href="../css/quotes.css" />
   <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
-  <header>
-    <div class="logo">
-      <strong><u>STUDY<br />BUDDY</u></strong>
-      <p><i>your smart, simple student planner</i></p>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="pomodoro.html">Pomodoro</a></li>
-        <li><a href="tasks.html">My Tasks</a></li>
-        <li><a href="about.html">About Us</a></li>
-      </ul>
-    </nav>
-  </header>
 
+  <div data-include="../components/header.html"></div>
+  
   <main class="content">
     <h1>Motivational Flower</h1>
     <p>Click the flower to bloom with motivation 🌸</p>
@@ -41,14 +29,14 @@
     <a href="#" onclick="tweetQuote()">🐦 Tweet</a>
     <a href="#" onclick="whatsappQuote()">💬 WhatsApp</a>
   </div>
-  
-  <footer>
-    <p>© 2025 Study Buddy. All rights reserved.</p>
-  </footer>
 
+  <div data-include="../components/footer.html"></div>
+  
   <script src="../js/include.js"></script>
   <script src="../js/script.js"></script>
   <script src="../js/quotes.js"></script>
 
 </body>
 </html>
+
+
