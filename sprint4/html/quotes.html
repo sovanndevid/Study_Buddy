@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Motivational Flower | Study Buddy</title>
+  <link rel="stylesheet" href="quotes.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <strong><u>STUDY<br />BUDDY</u></strong>
+      <p><i>your smart, simple student planner</i></p>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pomodoro.html">Pomodoro</a></li>
+        <li><a href="tasks.html">My Tasks</a></li>
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="content">
+    <h1>Motivational Flower</h1>
+    <p>Click the flower to bloom with motivation 🌸</p>
+
+    <div class="flower" onclick="showQuoteAndBloom()">
+      🌸
+    </div>
+
+    <p id="quote" class="quote">"Click the flower for motivation!"</p>
+
+    <button onclick="showQuoteAndBloom()">Give Me Motivation</button>
+  </main>
+
+  <div class="share-buttons">
+    <button onclick="copyQuote()">📋 Copy</button>
+    <a href="#" onclick="tweetQuote()">🐦 Tweet</a>
+    <a href="#" onclick="whatsappQuote()">💬 WhatsApp</a>
+  </div>
+  
+  <footer>
+    <p>© 2025 Study Buddy. All rights reserved.</p>
+  </footer>
+
+  <script src="quotes.js"></script>
+</body>
+</html>

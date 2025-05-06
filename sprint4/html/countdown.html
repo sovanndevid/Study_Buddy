@@ -3,22 +3,46 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Countdown | Study Buddy</title>
-  <link rel="stylesheet" href="../css/style.css" />
+  <title>Countdown Timer</title>
+  <link rel="stylesheet" href="countdown.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-  <div data-include="../components/header.html"></div>
+  <header>
+    <div class="logo">
+      <span><b><u>STUDY</b></u></span>
+      <span><b><u>BUDDY</u></b></span>
+      <small style="font-size: 0.75rem; color: gray;"><i>your smart, simple student planner</i></small>
+    </div>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">Pomodoro</a>
+        <a href="#">My Tasks</a>
+        <a href="#">About Us</a>
+      </nav>
+  </header>
 
   <main class="timer-container">
-    <h1>Countdown Page</h1>
-    <p>This is a placeholder for the countdown feature. You can build the UI here.</p>
+    <h2>Countdown Timer</h2>
+    <div class="countdown-display" id="countdown">00:00:00</div>
+
+    <div class="input-section">
+      <input type="text" id="event-name" placeholder="Event Name" />
+      <input type="date" id="event-date" />
+      <input type="time" id="event-time" />
+    </div>
+
+    <div class="button-group">
+      <button class="start" onclick="startCountdown()">Start</button>
+      <button class="pause" onclick="pauseCountdown()">Pause</button>
+      <button class="reset" onclick="resetCountdown()">Reset</button>
+    </div>
   </main>
-  
-  <div data-include="../components/footer.html"></div>
-  
-  <script src="../js/include.js"></script>
-  <script src="../js/script.js"></script>
-  
+
+  <footer>
+    © 2025 Study Buddy. All rights reserved.
+  </footer>
+
+  <script src="countdown.js"></script>
 </body>
 </html>
