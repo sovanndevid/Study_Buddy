@@ -7,32 +7,15 @@
   <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
-
-  <!-- HEADER -->
-  <header>
-    <div class="nav-container">
-      <div class="brand">
-        <div class="brand-name">Study Buddy <small>2025</small></div>
-        <div class="tagline">Plan. Track. Succeed.</div>
-      </div>
-      <nav class="nav-links">
-        <a href="#features">Explore Features</a>
-        <a href="#about">About Us</a>
-      </nav>
-    </div>
-  </header>
-
-  <!-- HERO SECTION -->
+  <div data-include="components/header.html"></div>
   <section class="hero centered-layout">
     <h1>Welcome to Study Buddy</h1>
     <p>Your personal companion to track tasks, manage time, and stay focused!</p>
     <a href="#features" class="nav-btn">Explore Features</a>
   </section>
-
-  <!-- FEATURES SECTION -->
   <section id="features" class="card-container">
     <div class="card">
-      <a href="todo.html">
+      <a href="html/todolist.html">
         <div class="card-inner">
           <div class="card-front">
             <h3>To-Do List</h3>
@@ -87,33 +70,12 @@
       </a>
     </div>
   </section>
-
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="footer-container">
-      <div class="brand-name">2025 Study Buddy. All rights reserved.</div>
-      <div class="footer-links">
-        <a href="#about">About Us</a>
-      </div>
-    </div>
-  </footer>
-
-  <!-- ABOUT US SECTION -->
   <section id="about" class="hero centered-layout">
     <h2>About Us</h2>
     <p>Study Buddy is your go-to tool for productivity. We believe in making study life easier, more organised, and more successful. Built by students, for students.</p>
   </section>
-
-  <!-- DARK MODE TOGGLE BUTTON -->
-  <button id="darkModeToggle">🌙 Dark Mode</button>
-
-  <script>
-    // Dark Mode Toggle
-    const darkModeToggle = document.getElementById('darkModeToggle');
-    darkModeToggle.addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode');
-    });
-  </script>
-
+  <div data-include="components/footer.html"></div>
+  <script src="js/include.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
