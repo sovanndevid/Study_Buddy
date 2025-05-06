@@ -51,5 +51,4 @@ function resetCountdown() {
 
 function celebrate() {
   alert("🎉 Time's up! Good luck with your event!");
-  // You can integrate confetti JS library or play audio here
 }

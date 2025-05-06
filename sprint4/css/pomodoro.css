@@ -51,7 +51,6 @@
     margin-top: 4px;
   }
   
-  /* Pulsing animation while running */
   .pulsing #time {
     animation: pulse 1s infinite ease-in-out;
   }

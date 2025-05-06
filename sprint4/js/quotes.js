@@ -39,11 +39,10 @@ const quotes = [
   
   function bloomFlower() {
     const flower = document.querySelector('.flower');
-    flower.style.transform = "scale(1.5)"; // Make the flower bloom (scale up)
-    flower.style.transition = "transform 0.3s ease"; // Smooth transition for blooming effect
+    flower.style.transform = "scale(1.5)"; 
+    flower.style.transition = "transform 0.3s ease"; 
   
-    // Optional: Shrink the flower back after a brief moment
     setTimeout(() => {
       flower.style.transform = "scale(1)";
-    }, 1000); // Shrink after 1 second
+    }, 1000); 
   }

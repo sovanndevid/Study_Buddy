@@ -20,7 +20,7 @@
   }
   
   header {
-    background-color: #d6eaff; /* same blue as shown */
+    background-color: #d6eaff; 
     display: flex;
     justify-content: space-between;
     align-items: center;
