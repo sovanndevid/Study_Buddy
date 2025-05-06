@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TOP END Gym Center</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <div class="brand">
+        <img src="images/logo.png" alt="TOP END Logo" class="logo" />
+        <span class="brand-name">TOP END<br><small>GYM CENTER</small></span>
+      </div>
+      <nav>
+        <div class="hamburger" onclick="toggleMenu(this)">
+          <span></span><span></span><span></span>
+        </div>
+        <div class="nav-links">
+          <a href="#">Home</a>
+          <a href="#services">Services</a>
+          <a href="#">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <section class="hero centered-layout">
+    <h1>Welcome to TOP END Gym Center</h1>
+    <p>
+      We help you reach your fitness goals with expert coaching, flexible training programs,
+      and practical nutrition guidance. Explore our services below.
+    </p>
+    <button onclick="document.getElementById('services').scrollIntoView({ behavior: 'smooth' })">
+      Learn More
+    </button>
+  </section>
+  <section class="cards" id="services">
+    <div class="card" onclick="openModal('trainerModal')">
+      <img src="images/trainer-icon.png" alt="Trainer Icon" />
+      <h3>Find a Personal Trainer</h3>
+      <p>Get matched with a certified coach tailored to your goals</p>
+      <span class="arrow">➜</span>
+    </div>
+    <div class="card" onclick="openModal('timetableModal')">
+      <img src="images/calendar-icon.png" alt="Calendar Icon" />
+      <h3>Group Fitness Timetable</h3>
+      <p>Check out upcoming classes</p>
+      <span class="arrow">➜</span>
+    </div>
+    <div class="card" onclick="openModal('nutritionModal')">
+      <img src="images/meal-icon.png" alt="Meal Icon" />
+      <h3>Nutrition & Meal Tips</h3>
+      <p>Get advice for healthy eating</p>
+      <span class="arrow">➜</span>
+    </div>
+    <div class="card" onclick="openModal('membershipModal')">
+      <img src="images/lock-icon.png" alt="Lock Icon" />
+      <h3>Join Membership</h3>
+      <p>Start your fitness journey</p>
+      <span class="arrow">➜</span>
+    </div>
+  </section>
+  <div id="trainerModal" class="modal" onclick="outsideClick(event, 'trainerModal')">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('trainerModal')">&times;</span>
+      <h3>Meet Our Trainers</h3>
+      <p>Our certified personal trainers are here to guide you:</p>
+      <div class="trainer-gallery">
+        <div><img src="images/trainer-jessica.jpg" alt="Coach Jessica"><p>Jessica</p></div>
+        <div><img src="images/trainer-marcus.jpg" alt="Coach Marcus"><p>Marcus</p></div>
+        <div><img src="images/trainer-li.jpg" alt="Coach Li"><p>Coach Li</p></div>
+      </div>
+      <button class="modal-btn">Book Now</button>
+    </div>
+  </div>
+  <div id="timetableModal" class="modal" onclick="outsideClick(event, 'timetableModal')">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('timetableModal')">&times;</span>
+      <h3>Weekly Class Schedule</h3>
+      <table class="timetable">
+        <thead>
+          <tr>
+            <th>Day</th>
+            <th>6 AM</th>
+            <th>9 AM</th>
+            <th>12 PM</th>
+            <th>6 PM</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Mon</td>
+            <td>Yoga</td>
+            <td></td>
+            <td></td>
+            <td>HIIT</td>
+          </tr>
+          <tr>
+            <td>Tue</td>
+            <td></td>
+            <td>Boxing</td>
+            <td></td>
+            <td>Spin Class</td>
+          </tr>
+          <tr>
+            <td>Wed</td>
+            <td>Pilates</td>
+            <td></td>
+            <td></td>
+            <td>Strength</td>
+          </tr>
+          <tr>
+            <td>Thu</td>
+            <td>Mobility</td>
+            <td>HIIT</td>
+            <td></td>
+            <td>Yoga</td>
+          </tr>
+          <tr>
+            <td>Fri</td>
+            <td></td>
+            <td>Spin</td>
+            <td>Stretch</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div id="nutritionModal" class="modal" onclick="outsideClick(event, 'nutritionModal')">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('nutritionModal')">&times;</span>
+      <h3>Nutrition & Meal Tips</h3>
+      <p>Select your goal below:</p>
+      <div class="nutrition-options">
+        <div>
+          <img src="images/bulking.jpg" alt="Bulking">
+          <p><strong>Bulking:</strong> High-calorie meals & protein shakes</p>
+        </div>
+        <div>
+          <img src="images/cutting.jpg" alt="Cutting">
+          <p><strong>Cutting:</strong> Lean proteins & low-carb options</p>
+        </div>
+        <div>
+          <img src="images/maintain.jpg" alt="Maintaining">
+          <p><strong>Maintaining:</strong> Balanced meals for energy</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="membershipModal" class="modal" onclick="outsideClick(event, 'membershipModal')">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('membershipModal')">&times;</span>
+      <h3>Join Our Community</h3>
+      <p>Choose the plan that fits your goals:</p>
+      <form>
+        <label for="name">Name</label>
+        <input type="text" id="name" required />
+        <label for="email">Email</label>
+        <input type="email" id="email" required />
+        <label for="plan">Choose Plan</label>
+        <select id="plan" required>
+          <option value="" disabled selected>Select your plan</option>
+          <option value="fortnightly">Fortnightly – $29</option>
+          <option value="monthly">Monthly – $49 (includes PT)</option>
+          <option value="yearly">Yearly – $499 (save 20%)</option>
+        </select>
+        <button type="submit" class="modal-btn">Join Now</button>
+      </form>
+      <div id="form-feedback" class="form-feedback">
+        <h4>Thanks for joining!</h4>
+        <p>We’ll be in touch shortly with your membership details.</p>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="footer-container">
+      <p>&copy; 2025 TOP END Gym Center. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>

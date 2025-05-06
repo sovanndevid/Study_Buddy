@@ -1,0 +1,31 @@
+[
+    {
+      "name": "John Doe",
+      "email": "john.doe@example.com",
+      "age": 30,
+      "visitFrequency": "3-4 times a week",
+      "facilities": [
+        "gymFloor"
+      ],
+      "feedback": "Great gym!"
+    },
+    {
+      "name": "Devid",
+      "email": "sovanndevid165@gamil.com",
+      "visitFrequency": "1-2",
+      "facilities": [
+        "gymFloor"
+      ],
+      "feedback": "dedqwd"
+    },
+    {
+      "name": "Devid NONG",
+      "email": "sovanndevid165@gamil.com",
+      "visitFrequency": "1-2",
+      "facilities": [
+        "gymFloor"
+      ],
+      "feedback": "dadadasdasdasda"
+    }
+  ]
+  
