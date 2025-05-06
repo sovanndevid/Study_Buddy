@@ -1,4 +1,4 @@
-let sessionTime = 25;
+let sessionTime = 0.05;
 let breakTime = 5;
 let timeLeft = sessionTime * 60;
 let timer;
@@ -29,6 +29,14 @@ function updateCircle() {
   circle.style.strokeDashoffset = circumference * (1 - percent);
 }
 
+function updateModeDisplay() {
+  modeDisplay.textContent = isSession ? "Session" : "Break";
+  document.body.classList.remove("session-mode", "break-mode");
+  document.body.classList.add(isSession ? "session-mode" : "break-mode");
+
+  circle.style.stroke = isSession ? "#2563eb" : "#10b981"; // blue or green
+}
+
 function startTimer() {
   if (!isRunning) {
     timer = setInterval(() => {
@@ -39,20 +47,17 @@ function startTimer() {
       if (timeLeft <= 0) {
         clearInterval(timer);
         isRunning = false;
-        document.querySelector(".center-text").classList.remove("pulsing");
         modalTitle.textContent = isSession ? "Session Complete!" : "Break Complete!";
         modal.style.display = "flex";
       }
     }, 1000);
     isRunning = true;
-    document.querySelector(".center-text").classList.add("pulsing");
   }
 }
 
 function pauseTimer() {
   clearInterval(timer);
   isRunning = false;
-  document.querySelector(".center-text").classList.remove("pulsing");
 }
 
 function resetTimer() {
@@ -61,7 +66,6 @@ function resetTimer() {
   timeLeft = isSession ? sessionTime * 60 : breakTime * 60;
   updateTimeDisplay();
   updateCircle();
-  document.querySelector(".center-text").classList.remove("pulsing");
 }
 
 function setTime(session, brk) {
@@ -69,21 +73,58 @@ function setTime(session, brk) {
   breakTime = brk;
   isSession = true;
   timeLeft = session * 60;
-  modeDisplay.textContent = "Session";
+  updateModeDisplay();
   updateTimeDisplay();
   updateCircle();
   resetTimer();
 }
 
-// Modal close + switch mode
+function startBreakManually() {
+  // Switch to break mode
+  clearInterval(timer);
+  isSession = false;
+  timeLeft = breakTime * 60;
+  updateModeDisplay();
+  updateTimeDisplay();
+  updateCircle();
+  startTimer(); // Start the break timer after switching
+  closeModal(); // Close the modal after starting the break
+}
+
+function startNewSession() {
+  // Switch to session mode
+  clearInterval(timer);
+  isSession = true;
+  timeLeft = sessionTime * 60;
+  updateModeDisplay();
+  updateTimeDisplay();
+  updateCircle();
+  startTimer(); // Start a new session after switching
+  closeModal(); // Close the modal after starting the session
+}
+
 function closeModal() {
   modal.style.display = "none";
-  isSession = !isSession;
-  modeDisplay.textContent = isSession ? "Session" : "Break";
-  timeLeft = isSession ? sessionTime * 60 : breakTime * 60;
+  updateModeDisplay();
   updateTimeDisplay();
   updateCircle();
 }
 
+// Adding event listeners to modal buttons
+document.getElementById("startBreakButton").addEventListener('click', function() {
+  startBreakManually();
+  closeModal(); // Close modal after starting the break
+});
+
+document.getElementById("startNewSessionButton").addEventListener('click', function() {
+  startNewSession();
+  closeModal(); // Close modal after starting a new session
+});
+
+document.getElementById("closeModalButton").addEventListener('click', function() {
+  closeModal(); // Close modal without starting anything
+});
+
+updateModeDisplay();
 updateTimeDisplay();
 updateCircle();

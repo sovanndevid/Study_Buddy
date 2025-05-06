@@ -11,7 +11,6 @@
 
   <div data-include="../components/header.html"></div>
 
-
   <main class="timer-container">
     <h1>Pomodoro Timer</h1>
     <p class="description">A simple, effective time management method using work and break cycles.</p>
@@ -25,7 +24,6 @@
         <div id="mode">Session</div>
       </div>
     </div>
-    
 
     <div class="controls">
       <button onclick="startTimer()">Start</button>
@@ -42,24 +40,17 @@
     </div>
   </main>
 
-  <!-- INTERACTIVE MODAL -->
-  <div id="sessionModal" class="modal">
-    <div class="modal-content">
-      <h2 id="modalTitle">Session Complete!</h2>
-      <p>What would you like to do next?</p>
-      <div class="modal-actions">
-        <button onclick="startBreakManually()">Start Break</button>
-        <button onclick="startNewSession()">New Session</button>
-        <button onclick="closeModal()">Close</button>
+    <div id="sessionModal" class="modal">
+        xwx<div class="modal-content">
+        <h2 id="modalTitle">Session Complete!</h2>
+        <p>What would you like to do next?</p>
+        <div class="modal-actions">
+          <button id="startBreakButton">Start Break</button>
+          <button id="startNewSessionButton">New Session</button>
+          <button id="closeModalButton">Close</button>
+        </div>
       </div>
     </div>
-  </div>
-
-  
-
-  
-  
-
 
   <div data-include="../components/footer.html"></div>
 
