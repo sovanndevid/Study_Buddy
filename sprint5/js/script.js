@@ -1,3 +1,11 @@
+
+window.toggleMenu = function (hamburger) {
+  hamburger.classList.toggle("open");
+  const navLinks = hamburger.closest("nav").querySelector(".nav-links");
+  if (navLinks) navLinks.classList.toggle("active");
+};
+
+
 document.addEventListener("DOMContentLoaded", () => {
   // Flip cards
   const cards = document.querySelectorAll(".card");
@@ -7,30 +15,18 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Explore scroll
+  // Smooth scroll from hero
   const exploreBtn = document.getElementById('exploreBtn');
-  const services = document.getElementById('Features');
-  if (exploreBtn && services) {
+  const features = document.getElementById('features');
+  if (exploreBtn && features) {
     exploreBtn.addEventListener('click', () => {
-      services.scrollIntoView({ behavior: 'smooth' });
+      features.scrollIntoView({ behavior: 'smooth' });
     });
   }
 
-  // Footer year
+  // Update year in footer if present
   const currentYear = document.getElementById("currentYear");
   if (currentYear) {
     currentYear.textContent = new Date().getFullYear();
   }
-
-  // Mobile menu
-  window.toggleMenu = function (hamburger) {
-    hamburger.classList.toggle("open");
-    const navLinks = document.querySelector(".nav-links");
-    if (navLinks) navLinks.classList.toggle("active");
-  };
-
-  
-
-
-
-
+});
