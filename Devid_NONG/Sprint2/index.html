@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Share your gym experience to help us improve our services">
+  <title>Top End Gym - Experience Review</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  <div class="container">
+    <header class="header-flex" role="banner">
+      <div class="left-column">
+        <div class="logo-section" aria-label="Gym logo">
+          <img src="images/logo.png" alt="Top End Gym Center Logo" width="180" height="60">
+        </div>
+        <address class="info-section">
+          <p><a href="https://www.google.com.au/maps/place/54+Cavenagh+St,+Darwin+City+NT+0800/@-12.4598403,130.8368669,17z/data=!4m15!1m8!3m7!1s0x2cc0910959d41687:0xcf84b444e29fdf57!2s54+Cavenagh+St,+Darwin+City+NT+0800!3b1!8m2!3d-12.4598561!4d130.8417485!16s%2Fg%2F11vl5d24vj!3m5!1s0x2cc0910959d41687:0xcf84b444e29fdf57!8m2!3d-12.4598561!4d130.8417485!16s%2Fg%2F11vl5d24vj?entry=ttu&g_ep=EgoyMDI1MDMxOS4yIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">📍 54 Cavenagh St, Darwin</a></p>
+          <p>🕒 Office Hour <time datetime="09:00">9AM</time> - <time datetime="17:00">5PM</time></p>
+          <p>📞 <a href="tel:+61 1800061963">1800 061 963</a></p>
+        </address>
+      </div>
+
+      <div class="right-column">
+        <div class="title-container">
+          <h1>Gym Experience Review</h1>
+          <div class="white-line" aria-hidden="true"></div>
+          <p class="subheading">Share your experience and help us improve your gym journey</p>
+        </div>
+      </div>
+    </header>
+
+    <main role="main">
+      <form id="gymReviewForm" aria-labelledby="formTitle">
+        <h2 id="formTitle" class="visually-hidden">Gym Experience Review Form</h2>
+        
+        <!-- Personal Details -->
+        <fieldset>
+          <legend><h3>Personal Details</h3></legend>
+
+          <div class="form-group">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" placeholder="John Doe" required aria-required="true">
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="example@mail.com" required aria-required="true">
+          </div>
+
+          <div class="form-group">
+            <label for="age">Your Age:</label>
+            <input type="number" id="age" name="age" min="15" max="80" placeholder="25" required aria-required="true">
+          </div>
+        </fieldset>
+
+        <!-- Workout Preferences -->
+        <fieldset>
+          <legend><h3>Workout Preferences</h3></legend>
+          <div class="form-group">
+            <label for="visitFrequency">How often do you visit the gym?</label>
+            <select id="visitFrequency" name="visitFrequency" required aria-required="true">
+              <option value="" disabled selected>-- Select --</option>
+              <option value="daily">Daily</option>
+              <option value="3-4">3-4 times a week</option>
+              <option value="1-2">1-2 times a week</option>
+              <option value="rarely">Rarely</option>
+            </select>
+          </div>
+          <!-- Facilities Section-->
+          <fieldset class="facilities-section" aria-labelledby="facilitiesHeading">
+            <legend id="facilitiesHeading" class="visually-hidden">Facility Ratings</legend>
+            <p><strong>Facilities You Use (Rate each):</strong></p>
+            <!-- Gym Floor -->
+            <div class="facility-rating">
+              <div class="facility-name">
+                <input type="checkbox" id="gymFloorCheck" name="facility" value="gymFloor">
+                <label for="gymFloorCheck">Gym Floor</label>
+              </div>
+              <select name="gymFloorRating" aria-label="Gym Floor Rating">
+                <option value="" disabled selected>Rate</option>
+                <option value="1">1 - Poor</option>
+                <option value="2">2 - Fair</option>
+                <option value="3">3 - Average</option>
+                <option value="4">4 - Good</option>
+                <option value="5">5 - Excellent</option>
+              </select>
+            </div>
+           <!-- Swimming Pool -->
+            <div class="facility-rating">
+              <div class="facility-name">
+                <input type="checkbox" id="swimmingPoolCheck" name="facility" value="swimmingPool">
+                <label for="swimmingPoolCheck">Swimming Pool</label>
+              </div>
+              <select name="swimmingPoolRating" aria-label="Swimming Pool Rating">
+                <option value="" disabled selected>Rate</option>
+                <option value="1">1 - Poor</option>
+                <option value="2">2 - Fair</option>
+                <option value="3">3 - Average</option>
+                <option value="4">4 - Good</option>
+                <option value="5">5 - Excellent</option>
+              </select>
+            </div>
+            <!-- Group Classes -->
+            <div class="facility-rating">
+              <div class="facility-name">
+                <input type="checkbox" id="groupClassesCheck" name="facility" value="groupClasses">
+                <label for="groupClassesCheck">Group Classes</label>
+              </div>
+              <select name="groupClassesRating" aria-label="Group Classes Rating">
+                <option value="" disabled selected>Rate</option>
+                <option value="1">1 - Poor</option>
+                <option value="2">2 - Fair</option>
+                <option value="3">3 - Average</option>
+                <option value="4">4 - Good</option>
+                <option value="5">5 - Excellent</option>
+              </select>
+            </div>
+          </fieldset>
+        </fieldset>
+        <!-- Additional Comments -->
+        <fieldset>
+          <legend><h3>Additional Comments</h3></legend>
+          <div class="form-group">
+            <label for="feedback">Your Comments:</label>
+            <textarea id="feedback" name="feedback" rows="4"
+              placeholder="E.g. Love the equipment, but showers need attention."></textarea>
+          </div>
+        </fieldset>
+
+        <div class="form-actions">
+          <button type="submit">Submit Review</button>
+        </div>
+      </form>
+    </main>
+
+    <footer role="contentinfo">
+      <p>&copy; <span id="currentYear">2025</span> Top End Gym Center. All rights reserved.</p>
+    </footer>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+</html>

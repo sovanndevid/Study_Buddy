@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Motivational Flower | Study Buddy</title>
+  <link rel="stylesheet" href="../css/quotes.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <div data-include="../components/header.html"></div>
+  
+  <main class="content">
+    <h1>Motivational Flower</h1>
+    <p>Click the flower to bloom with motivation 🌸</p>
+
+    <div class="flower" onclick="showQuoteAndBloom()">
+      🌸
+    </div>
+
+    <p id="quote" class="quote">"Click the flower for motivation!"</p>
+
+    <button onclick="showQuoteAndBloom()">Give Me Motivation</button>
+  </main>
+
+  <div class="share-buttons">
+    <button onclick="copyQuote()">📋 Copy</button>
+    <a href="#" onclick="tweetQuote()">🐦 Tweet</a>
+    <a href="#" onclick="whatsappQuote()">💬 WhatsApp</a>
+  </div>
+
+  <div data-include="../components/footer.html"></div>
+  
+  <script src="../js/include.js"></script>
+  <script src="../js/script.js"></script>
+  <script src="../js/quotes.js"></script>
+
+</body>
+</html>
+
+

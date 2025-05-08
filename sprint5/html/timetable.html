@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Countdown | Study Buddy</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/timetable.css"/>
+</head>
+<body>
+
+  <div data-include="../components/header.html"></div>
+
+  <main class="timer-container">
+ 
+    <header>My Timetable</header>
+    <table role="grid" aria-readonly="false" tabindex="0" aria-label="Weekly timetable grid">
+      <thead>
+        <tr role="row">
+          <th role="columnheader" aria-label="Time">Time</th>
+          <th role="columnheader">Monday</th>
+          <th role="columnheader">Tuesday</th>
+          <th role="columnheader">Wednesday</th>
+          <th role="columnheader">Thursday</th>
+          <th role="columnheader">Friday</th>
+        </tr>
+      </thead>
+      <tbody id="timetable-body">
+        <!-- Rows will be populated by JS -->
+      </tbody>
+    </table>
+    <footer>Click any cell to add or edit your schedule.</footer>
+
+  </div>
+
+  
+  <div data-include="../components/footer.html"></div>
+  
+  <script src="../js/include.js"></script>
+  <script src="../js/script.js"></script>
+  <script src="../js/timetable.js"></script>
+  
+</body>
+</html>
