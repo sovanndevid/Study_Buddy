@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Little Zareef's Jungle Friends</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="card-container">
+    <!-- Main card -->
+    <div class="card" id="main-card">
+      <img src="tiger.png" alt="Friendly Tiger" class="tiger-img" />
+      <h2>Welcome!</h2>
+      <p>Meet our friendly tiger! Click the button to say hi! 🐯</p>
+      <button id="sayHiBtn">Say Hi!</button>
+    </div>
+
+    <!-- Info card -->
+    <div class="card hidden" id="info-card">
+      <h2>🐾 About Our Jungle Friends 🐾</h2>
+      <p>Our little jungle explorer loves to meet new animal friends and learn new things! This interactive card helps kids feel joy while exploring.</p>
+      <p>Parents can use this fun interaction to teach kids about animals, emotions, and making friends! 🐘🦁🦜</p>
+      <button id="nextBtn">Goodbye</button>
+    </div>
+
+    <!-- Celebration card -->
+    <div class="card hidden" id="celebration-card">
+      <h1>🎉 See you soon, explorer! 🎉</h1>
+      <p>You made a tiger smile today! 🐯✨</p>
+      <p>Have a ROAR-some day! ❤️</p>
+      <button id="backBtn">Go Back</button>
+    </div>
+  </div>
+
+  <!-- Confetti canvas -->
+  <canvas id="sparkle-canvas" class="hidden"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>

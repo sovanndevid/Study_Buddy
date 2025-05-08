@@ -1,0 +1,85 @@
+/* === General Styles === */
+body {
+    margin: 0;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #f0f8ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* === Form Container === */
+  .form-container {
+    background-color: white;
+    padding: 30px 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+  }
+  
+  /* === Form Header === */
+  .form-container h2::after {
+    content: "\A Little Zareef's Childcare";
+    white-space: pre;
+    font-size: 0.85em;
+    font-weight: normal;
+    color: #555;
+  }
+  
+  /* === Form Elements === */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  label {
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  
+  input,
+  select,
+  textarea {
+    padding: 10px 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border 0.3s, box-shadow 0.3s;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  input:focus,
+  select:focus,
+  textarea:focus {
+    outline: none;
+    border-color: #00a86b;
+    box-shadow: 0 0 0 3px rgba(0, 168, 107, 0.2);
+  }
+  
+  small {
+    font-size: 0.85em;
+    color: #555;
+  }
+  
+  /* === Submit Button === */
+  button[type="submit"] {
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: #00a86b;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #007a53;
+  }
+  

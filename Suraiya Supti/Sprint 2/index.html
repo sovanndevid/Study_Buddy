@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Little Zareef's Childcare</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     
+    <div class="form-container">
+        <h2>Data Entry Form</h2>
+        <h3>Little Zareef's Childcare</h3>
+        <form id="dataEntryForm">
+            <label for="childName">Child's Full Name:</label>
+            <input type="text" id="childName" name="ChildName" required>
+
+            <label for="parentName">Parent's Full Name:</label>
+            <input type="text" id="parentName" name="parentName" required>
+
+            <label for="emergencyContact">Emergency Contact Number:</label>
+            <input type="tel" id="emergencyContact" name="emergencyContact" pattern="[0-9]{10}" required>
+            <small>Format: 10 digits (no spaces)</small>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="allergies">Allergies or Medical Conditions:</label>
+            <textarea id="allergies" name="allergies" rows="2"></textarea>
+
+            <label for="pickupTime">Preferred Pick-up Time:</label>
+            <input type="time\" id="pickupTime" name="pickupTime" required>
+            </select>
+
+            <label for="comments">Additional Comments:</label>
+            <textarea id="comments" name="comments" rows="4"></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
