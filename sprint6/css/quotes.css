@@ -45,6 +45,32 @@ main.content {
 .bloom {
   animation: bloomAnimation 0.6s ease;
 }
+.share-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.share-buttons .share-link {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #214fc6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.share-buttons .share-link:hover {
+  background-color: #1536a1;
+}
+
 
 @keyframes bloomAnimation {
   0% {
