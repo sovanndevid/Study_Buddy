@@ -73,7 +73,8 @@ button:hover {
 }
 
 /* Inputs and textarea for reminders */
-input[type="email"], textarea {
+input[type="email"],
+textarea {
   width: 100%;
   padding: 12px;
   margin: 10px 0;
@@ -81,6 +82,33 @@ input[type="email"], textarea {
   border-radius: 6px;
   font-size: 1rem;
   box-sizing: border-box;
+}
+
+/* Fix textarea resizing */
+textarea {
+  resize: none;
+  height: 120px;
+}
+
+/* Email reminder section */
+.email-reminder {
+  margin-top: 40px;
+  background-color: #f0f4ff;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #ccd6f6;
+  text-align: left;
+}
+
+.email-reminder h3 {
+  color: #1E3A8A;
+  margin-bottom: 15px;
+}
+
+.email-reminder label {
+  display: block;
+  margin-top: 10px;
+  font-weight: 600;
 }
 
 /* Responsive adjustments */
