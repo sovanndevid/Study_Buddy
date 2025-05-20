@@ -12,21 +12,24 @@
   <div data-include="../components/header.html"></div>
   <main class="timer-container">
     <h1>My Timetable</h1>
-  
-    <table role="grid" aria-readonly="false" tabindex="0" aria-label="Weekly timetable grid">
-      <thead>
-        <tr role="row">
-          <th role="columnheader">Time</th>
-          <th role="columnheader">Monday</th>
-          <th role="columnheader">Tuesday</th>
-          <th role="columnheader">Wednesday</th>
-          <th role="columnheader">Thursday</th>
-          <th role="columnheader">Friday</th>
-        </tr>
-      </thead>
-      <tbody id="timetable-body">
-      </tbody>
-    </table>
+
+    <div class="table-wrapper">
+
+      <table role="grid" aria-readonly="false" tabindex="0" aria-label="Weekly timetable grid">
+        <thead>
+          <tr role="row">
+            <th role="columnheader">Time</th>
+            <th role="columnheader">Monday</th>
+            <th role="columnheader">Tuesday</th>
+            <th role="columnheader">Wednesday</th>
+            <th role="columnheader">Thursday</th>
+            <th role="columnheader">Friday</th>
+          </tr>
+        </thead>
+        <tbody id="timetable-body">
+        </tbody>
+      </table>
+    </div>
   
     <p style="margin-top: 10px;">Click any cell to edit your schedule. Changes auto-save.</p>
   
