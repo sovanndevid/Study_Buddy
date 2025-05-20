@@ -10,9 +10,6 @@
 <body>
 
   <div data-include="../components/header.html"></div>
-
-
-
   <main class="timer-container">
     <h1>My Timetable</h1>
   
@@ -28,7 +25,6 @@
         </tr>
       </thead>
       <tbody id="timetable-body">
-        <!-- JavaScript will generate this -->
       </tbody>
     </table>
   
@@ -42,26 +38,15 @@
       <form id="form">
         <label for="from_email">Your Email:</label>
         <input type="email" name="from_email" id="from_email" required />
-      
         <label for="to_email">To Email:</label>
         <input type="email" name="to_email" id="to_email" required />
-      
         <label for="message">Message:</label>
         <textarea name="message" id="message" required></textarea>
-      
-        <input type="submit" id="button" value="Send Email" />
+        <button type="submit" id="button">Send Email</button>
       </form>
-      
-      
     </section>
-    
-  
-
     </div>
   </main>
-  
-
-  
   <div data-include="../components/footer.html"></div>
   
   <script src="../js/include.js"></script>
@@ -69,11 +54,8 @@
   <script src="../js/timetable.js"></script>
   <script type="text/javascript"
   src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-
   <script type="text/javascript">
   emailjs.init('MahNOFo5QqcAekAv2')
-  </script>
-
-  
+  </script>  
 </body>
 </html>
