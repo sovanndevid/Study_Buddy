@@ -74,6 +74,7 @@ document.getElementById('form')
     .then(() => {
       btn.value = 'Send Email';
       alert('Sent!');
+      location.reload();
     }, (err) => {
       btn.value = 'Send Email';
       alert(JSON.stringify(err));
