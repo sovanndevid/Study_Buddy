@@ -11,13 +11,15 @@
 
   <div data-include="../components/header.html"></div>
 
+
+
   <main class="timer-container">
- 
-    <header>My Timetable</header>
+    <h1>My Timetable</h1>
+  
     <table role="grid" aria-readonly="false" tabindex="0" aria-label="Weekly timetable grid">
       <thead>
         <tr role="row">
-          <th role="columnheader" aria-label="Time">Time</th>
+          <th role="columnheader">Time</th>
           <th role="columnheader">Monday</th>
           <th role="columnheader">Tuesday</th>
           <th role="columnheader">Wednesday</th>
@@ -26,12 +28,28 @@
         </tr>
       </thead>
       <tbody id="timetable-body">
-        <!-- Rows will be populated by JS -->
+        <!-- JavaScript will generate this -->
       </tbody>
     </table>
-    <footer>Click any cell to add or edit your schedule.</footer>
-
-  </div>
+  
+    <p style="margin-top: 10px;">Click any cell to edit your schedule. Changes auto-save.</p>
+  
+    <div style="margin-top: 30px;">
+      <button onclick="sendTimetable()">Send Timetable via Email</button>
+    </div>
+  
+    <div style="margin-top: 50px; text-align: left;">
+      <h2>Send a Peer Reminder</h2>
+      <label for="peerEmail">Peer Email:</label>
+      <input type="email" id="peerEmail" placeholder="e.g. friend@email.com" style="width:100%; padding:10px; margin:10px 0;" />
+      
+      <label for="reminderMessage">Message:</label>
+      <textarea id="reminderMessage" rows="4" placeholder="Just a quick reminder to check the group timetable or complete your task!" style="width:100%; padding:10px;"></textarea>
+      
+      <button onclick="sendReminder()">Send Reminder</button>
+    </div>
+  </main>
+  
 
   
   <div data-include="../components/footer.html"></div>
