@@ -1,4 +1,4 @@
-let sessionTime = 0.05;
+let sessionTime = 25;
 let breakTime = 5;
 let timeLeft = sessionTime * 60;
 let timer;
