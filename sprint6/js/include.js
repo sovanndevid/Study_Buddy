@@ -10,6 +10,8 @@ document.addEventListener("DOMContentLoaded", () => {
         if (resp.ok) {
           const text = await resp.text();
           el.innerHTML = text;
+          const year = el.querySelector('#currentYear');
+          if (year) year.textContent = new Date().getFullYear();
           el.querySelectorAll("script").forEach((oldScript) => {
             const newScript = document.createElement("script");
             newScript.textContent = oldScript.textContent;

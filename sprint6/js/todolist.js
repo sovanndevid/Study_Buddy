@@ -11,13 +11,20 @@ function updateTaskList() {
   taskList.innerHTML = "";
   tasks.forEach((task, index) => {
     const li = document.createElement('li');
-    li.innerHTML = `
-      <span><strong>${index + 1}.</strong> ${task}</span>
-      <div>
-        <button class="edit">Edit</button>
-        <button class="delete">Delete</button>
-      </div>
-    `;
+    const label = document.createElement('span');
+    const number = document.createElement('strong');
+    number.textContent = (index + 1) + '.';
+    label.appendChild(number);
+    label.appendChild(document.createTextNode(' ' + task));
+    const controls = document.createElement('div');
+    const editButton = document.createElement('button');
+    editButton.className = 'edit';
+    editButton.textContent = 'Edit';
+    const deleteButton = document.createElement('button');
+    deleteButton.className = 'delete';
+    deleteButton.textContent = 'Delete';
+    controls.append(editButton, deleteButton);
+    li.append(label, controls);
 
     li.querySelector('span').addEventListener('click', () => {
       li.classList.toggle('completed');
@@ -84,7 +91,12 @@ window.onbeforeunload = function () {
 function displaySavedTasks() {
   if (savedList) {
     const saved = JSON.parse(localStorage.getItem("tasks")) || [];
-    savedList.innerHTML = saved.map((task, i) => `<li><strong>${i + 1}.</strong> ${task}</li>`).join('');
+    savedList.replaceChildren();
+    saved.forEach((task, i) => {
+      const li = document.createElement('li');
+      li.textContent = (i + 1) + '. ' + task;
+      savedList.appendChild(li);
+    });
   }
 }
 

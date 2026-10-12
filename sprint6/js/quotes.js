@@ -27,13 +27,13 @@ const quotes = [
   function tweetQuote() {
     const quoteText = document.getElementById("quote").innerText;
     const tweetUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(quoteText)}`;
-    window.open(tweetUrl, 'https://x.com/');
+    window.open(tweetUrl, '_blank', 'noopener,noreferrer');
   }
   
   function whatsappQuote() {
     const quoteText = document.getElementById("quote").innerText;
     const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(quoteText)}`;
-    window.open(whatsappUrl, 'https://web.whatsapp.com/');
+    window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
   }
   
   

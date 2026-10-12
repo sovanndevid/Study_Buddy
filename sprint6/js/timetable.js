@@ -58,23 +58,17 @@ function sendReminder() {
 
 document.addEventListener("DOMContentLoaded", loadTimetable);
 
-// emailjs
-const btn = document.getElementById('button');
-
-document.getElementById('form')
- .addEventListener('submit', function(event) {
-   event.preventDefault();
-
-   const serviceID = 'default_service';
-   const templateID = 'template_xsd7udp';
-
-   emailjs.sendForm(serviceID, templateID, this)
-    .then(() => {
-      btn.value = 'Send Email';
-      alert('Sent!');
-    }, (err) => {
-      btn.value = 'Send Email';
-      alert(JSON.stringify(err));
-      this.reload();
-    });
+// Open a draft in the user's own email client. No third-party email token,
+// automatic mail delivery, or outgoing network request from this static app.
+const emailForm = document.getElementById('form');
+if (emailForm) emailForm.addEventListener('submit', function (event) {
+  event.preventDefault();
+  if (!emailForm.reportValidity()) return;
+  const recipient = document.getElementById('to_email').value.trim();
+  const sender = document.getElementById('from_email').value.trim();
+  const message = document.getElementById('message').value.trim();
+  const body = message + '\\n\\nFrom: ' + sender + '\\nPrepared with Study Buddy';
+  window.location.href = 'mailto:' + encodeURIComponent(recipient) +
+    '?subject=' + encodeURIComponent('Study Buddy Reminder') +
+    '&body=' + encodeURIComponent(body);
 });
